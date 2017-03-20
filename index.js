@@ -1,9 +1,11 @@
 // adds `window.foo = "default";` at the top of the module
 // will repleace "default" with the content of options.text
-export default function({ types: t }) {
+module.exports = function(babel) {
+  var t = babel.types;
+
   return {
     visitor: {
-      Program(path, state) {
+      Program: function(path, state) {
         var options = state.opts;
 
         path.unshiftContainer("body", [
@@ -18,4 +20,4 @@ export default function({ types: t }) {
       }
     }
   };
-}
+};
