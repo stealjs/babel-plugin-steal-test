@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-steal-test",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Dummy babel plugin for StealJS testing",
   "main": "index.js",
   "scripts": {
